@@ -1,0 +1,67 @@
+﻿@model List<FitFlowWebMVC.Models.Entrenamiento>
+
+<div class="dashboard-container">
+
+    <h1>
+        Semana Inteligente 🔥
+    </h1>
+
+    <p>
+        FitFlow analizó tu rendimiento y generó recomendaciones automáticas.
+    </p>
+
+    <div class="dashboard-cards">
+
+        @foreach (var item in Model)
+        {
+            <div class="dashboard-card">
+
+                <h2>
+                    @item.Ejercicio
+                </h2>
+
+                <p>
+                    Día:
+                    @item.Dia
+                </p>
+
+                <p>
+                    Series:
+                    @item.Series
+                </p>
+
+                <p>
+                    Repeticiones:
+                    @item.Repeticiones
+                </p>
+
+                <p>
+                    Peso recomendado:
+                    <strong>
+                        @item.Peso kg
+                    </strong>
+                </p>
+
+                <p>
+                    IA FitFlow:
+                </p>
+
+                @if (item.Peso >= 100)
+                {
+                    <p>
+                        🔥 Excelente progreso
+                    </p>
+                }
+                else
+                {
+                    <p>
+                        💪 Sigue progresando
+                    </p>
+                }
+
+            </div>
+        }
+
+    </div>
+
+</div>

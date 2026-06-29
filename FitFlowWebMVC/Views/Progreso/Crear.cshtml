@@ -1,0 +1,36 @@
+﻿@model FitFlowWebMVC.Models.Progreso
+
+<div class="register-container">
+
+    <div class="register-card">
+
+        <h1>
+            Registrar Progreso
+        </h1>
+
+        <form asp-action="Crear" method="post">
+
+            <input asp-for="Peso"
+                   placeholder="Peso actual" />
+
+            <input asp-for="Pecho"
+                   placeholder="Pecho" />
+
+            <input asp-for="Cintura"
+                   placeholder="Cintura" />
+
+            <input asp-for="Brazos"
+                   placeholder="Brazos" />
+
+            <input asp-for="Piernas"
+                   placeholder="Piernas" />
+
+            <button type="submit">
+                Guardar Progreso
+            </button>
+
+        </form>
+
+    </div>
+
+</div>

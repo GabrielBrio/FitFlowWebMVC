@@ -1,0 +1,34 @@
+﻿@model List<FitFlowWebMVC.Models.Progreso>
+
+<div class="dashboard-container">
+
+    <h1>
+        Historial de Progreso
+    </h1>
+
+    <div class="dashboard-cards">
+
+        @foreach (var item in Model)
+        {
+            <div class="dashboard-card">
+
+                <h2>
+                    @item.Fecha.ToString("dd/MM/yyyy")
+                </h2>
+
+                <p>Peso: @item.Peso kg</p>
+
+                <p>Pecho: @item.Pecho cm</p>
+
+                <p>Cintura: @item.Cintura cm</p>
+
+                <p>Brazos: @item.Brazos cm</p>
+
+                <p>Piernas: @item.Piernas cm</p>
+
+            </div>
+        }
+
+    </div>
+
+</div>

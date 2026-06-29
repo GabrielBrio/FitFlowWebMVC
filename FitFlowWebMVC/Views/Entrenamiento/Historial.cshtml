@@ -1,0 +1,45 @@
+﻿@model List<FitFlowWebMVC.Models.Entrenamiento>
+
+<div class="dashboard-container">
+
+    <h1>
+        Historial de Entrenamientos
+    </h1>
+
+    <div class="dashboard-cards">
+
+        @foreach (var item in Model)
+        {
+            <div class="dashboard-card">
+
+                <h2>
+                    @item.Ejercicio
+                </h2>
+
+                <p>
+                    Día: @item.Dia
+                </p>
+
+                <p>
+                    Series: @item.Series
+                </p>
+
+                <p>
+                    Repeticiones: @item.Repeticiones
+                </p>
+
+                <p>
+                    Peso: @item.Peso kg
+                </p>
+
+                <p>
+                    Fecha:
+                    @item.Fecha.ToString("dd/MM/yyyy")
+                </p>
+
+            </div>
+        }
+
+    </div>
+
+</div>

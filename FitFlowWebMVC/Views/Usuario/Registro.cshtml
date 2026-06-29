@@ -1,0 +1,74 @@
+﻿@model FitFlowWebMVC.Models.Usuario
+
+@{
+    ViewData["Title"] = "Registro";
+}
+
+<div class="register-container">
+
+    <div class="register-card">
+
+        <h1>FitFlow</h1>
+
+        <h2>Crear Cuenta</h2>
+
+        <form asp-action="Registro" method="post">
+
+            <input asp-for="Nombre"
+                   placeholder="Nombre completo" />
+
+            <input asp-for="Correo"
+                   placeholder="Correo electrónico" />
+
+            <input asp-for="Contrasena"
+                   type="password"
+                   placeholder="Contraseña" />
+
+            <input asp-for="Peso"
+                   type="number"
+                   placeholder="Peso (kg)" />
+
+            <input asp-for="Altura"
+                   type="number"
+                   placeholder="Altura (cm)" />
+
+            <select asp-for="Objetivo">
+
+                <option value="">
+                    Selecciona tu objetivo
+                </option>
+
+                <option>
+                    Ganar masa muscular
+                </option>
+
+                <option>
+                    Perder grasa
+                </option>
+
+                <option>
+                    Mantención
+                </option>
+
+            </select>
+
+            <button type="submit">
+                Registrarse
+            </button>
+
+        </form>
+
+        <p>
+            ¿Ya tienes cuenta?
+
+            <a asp-controller="Usuario"
+               asp-action="Login">
+
+                Inicia sesión
+
+            </a>
+        </p>
+
+    </div>
+
+</div>

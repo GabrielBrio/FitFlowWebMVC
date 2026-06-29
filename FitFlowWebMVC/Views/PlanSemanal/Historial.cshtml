@@ -1,0 +1,71 @@
+﻿@model IEnumerable<FitFlowWebMVC.Models.PlanSemanal>
+
+@{
+    ViewData["Title"] = "Historial de Planes";
+}
+
+<div class="container">
+
+    <h1>
+        Historial de Planes Semanales
+    </h1>
+
+    <br />
+
+    <table class="table table-dark table-striped">
+
+        <thead>
+
+            <tr>
+
+                <th>Día</th>
+
+                <th>Grupo Muscular</th>
+
+                <th>Ejercicio</th>
+
+                <th>Series</th>
+
+                <th>Repeticiones</th>
+
+                <th>Peso</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+
+                    <td>@item.Dia</td>
+
+                    <td>@item.GrupoMuscular</td>
+
+                    <td>@item.Ejercicio</td>
+
+                    <td>@item.Series</td>
+
+                    <td>@item.Repeticiones</td>
+
+                    <td>@item.Peso kg</td>
+
+                </tr>
+            }
+
+        </tbody>
+
+    </table>
+
+    <br />
+
+    <a asp-action="Crear"
+       class="btn btn-danger">
+
+        Agregar Nuevo Plan
+
+    </a>
+
+</div>

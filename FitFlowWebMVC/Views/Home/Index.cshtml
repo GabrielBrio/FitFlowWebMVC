@@ -1,0 +1,78 @@
+﻿@{
+    ViewData["Title"] = "FitFlow";
+}
+
+<header>
+    <nav class="navbar">
+
+        <div class="logo">
+            FitFlow
+        </div>
+
+        <ul class="nav-links">
+
+            <li>
+                <a asp-controller="Usuario"
+                   asp-action="Login">
+
+                    Inicio
+
+                </a>
+            </li>
+
+            <li>
+                <a href="#">Rutinas</a>
+            </li>
+
+            <li>
+                <a href="#">Progreso</a>
+            </li>
+
+            <li>
+                <a href="#">Suplementos</a>
+            </li>
+
+            <li>
+                <a href="#">Contacto</a>
+            </li>
+
+        </ul>
+
+    </nav>
+</header>
+
+<section class="hero">
+
+    <h1>Bienvenido a FitFlow </h1>
+
+    <p>
+        Sistema inteligente de seguimiento fitness
+        para registrar entrenamientos y analizar tu progreso.
+    </p>
+
+    <a href="/Usuario/Registro">
+        <button>
+            Comenzar
+        </button>
+    </a>
+
+</section>
+
+<section class="cards">
+
+    <div class="card">
+        <h3>Rutinas</h3>
+        <p>Entrenamientos personalizados.</p>
+    </div>
+
+    <div class="card">
+        <h3>Progreso</h3>
+        <p>Visualiza tu evolución física.</p>
+    </div>
+
+    <div class="card">
+        <h3>Suplementos</h3>
+        <p>Recomendaciones fitness inteligentes.</p>
+    </div>
+
+</section>

@@ -1,0 +1,57 @@
+﻿@model FitFlowWebMVC.Models.Usuario
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="register-container">
+
+    <div class="register-card">
+
+        <h1>FitFlow</h1>
+
+        <h2>Iniciar Sesión</h2>
+        @if (ViewBag.Error != null)
+        {
+            <p style="color:red; margin-bottom:20px;">
+                @ViewBag.Error
+            </p>
+        }
+
+
+        @if (ViewBag.Error != null)
+        {
+            <p style="color:red; margin-bottom:20px;">
+                @ViewBag.Error
+            </p>
+        }
+
+        <form asp-action="Login" method="post">
+
+            <input asp-for="Correo"
+                   placeholder="Correo electrónico" />
+
+            <input asp-for="Contrasena"
+                   type="password"
+                   placeholder="Contraseña" />
+
+            <button type="submit">
+                Ingresar
+            </button>
+
+        </form>
+
+        <p>
+            ¿No tienes cuenta?
+
+            <a asp-controller="Usuario"
+               asp-action="Registro">
+
+                Regístrate
+
+            </a>
+        </p>
+
+    </div>
+
+</div>

@@ -1,0 +1,115 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="dashboard-container">
+
+    <h1>
+        Bienvenido @ViewBag.Usuario 🔥
+    </h1>
+
+    <p class="dashboard-subtitle">
+        Tu panel fitness inteligente.
+    </p>
+
+    <a asp-controller="Usuario"
+       asp-action="Logout"
+       class="logout-btn">
+        Cerrar Sesión
+    </a>
+
+    <div class="dashboard-cards">
+
+        <!-- RUTINAS -->
+        <a asp-controller="Entrenamiento"
+           asp-action="Crear"
+           class="card-link">
+
+            <div class="dashboard-card">
+
+                <h2>Rutinas</h2>
+
+                <p>
+                    Gestiona tus entrenamientos.
+                </p>
+
+            </div>
+
+        </a>
+
+        <!-- PROGRESO -->
+        <a asp-controller="Progreso"
+           asp-action="Historial"
+           class="card-link">
+
+            <div class="dashboard-card">
+
+                <h2>Progreso</h2>
+
+                <p>
+                    Visualiza tu evolución física.
+                </p>
+
+            </div>
+
+        </a>
+
+        <!-- SUPLEMENTOS -->
+        <div class="dashboard-card">
+
+            <h2>Suplementos</h2>
+
+            <p>
+                Recomendaciones inteligentes.
+            </p>
+
+        </div>
+
+        <!-- PLAN SEMANAL -->
+        <a asp-controller="PlanSemanal"
+           asp-action="Crear"
+           class="card-link">
+
+            <div class="dashboard-card">
+
+                <h2>Plan Semanal</h2>
+
+                <p>
+                    Configura tu semana fitness.
+                </p>
+
+            </div>
+
+        </a>
+
+    </div>
+
+    <div class="dashboard-actions">
+
+        <a asp-controller="Progreso"
+           asp-action="Crear"
+           class="action-btn">
+
+            Registrar Nuevo Progreso
+
+        </a>
+
+        <a asp-controller="Entrenamiento"
+           asp-action="Crear"
+           class="action-btn">
+
+            Registrar Entrenamiento
+
+        </a>
+
+        <a asp-controller="PlanSemanal"
+           asp-action="Crear"
+           class="action-btn">
+
+            Configurar Plan Semanal
+
+        </a>
+
+    </div>
+
+</div>

@@ -1,0 +1,39 @@
+﻿@model FitFlowWebMVC.Models.Entrenamiento
+
+<div class="register-container">
+
+    <div class="register-card">
+
+        <h1>
+            Registrar Entrenamiento
+        </h1>
+
+        <form asp-action="Crear" method="post">
+
+            <input asp-for="Dia"
+                   placeholder="Día de entrenamiento" />
+
+            <input asp-for="Ejercicio"
+                   placeholder="Ejercicio" />
+
+            <input asp-for="Series"
+                   type="number"
+                   placeholder="Series" />
+
+            <input asp-for="Repeticiones"
+                   type="number"
+                   placeholder="Repeticiones" />
+
+            <input asp-for="Peso"
+                   type="number"
+                   placeholder="Peso utilizado" />
+
+            <button type="submit">
+                Guardar Entrenamiento
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
